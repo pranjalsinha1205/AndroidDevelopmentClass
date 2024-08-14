@@ -1,0 +1,29 @@
+fun main(args:Array<String>) {//find why arguments are used for this
+//     var a = 20
+//     println(a)
+//     var `try` = 10
+//     println(`try`)
+//     val pi = 3.14
+//     println(pi)
+//     pi = pi + 1
+//     println(pi)
+    var a = 10
+    var b : Int
+    var c : Int
+    println(a)
+    var p: Person = Person()
+    p.displayInfo()
+    greet()
+}
+
+fun greet(){
+    val message = "Hello, World!"
+    println(message)
+}
+
+class Person{
+    var kotlin = "hello"
+    fun displayInfo(){
+        println(kotlin)
+    }
+}
