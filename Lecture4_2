@@ -1,0 +1,56 @@
+fun main(args:Array<String>) {
+    // string interpolation means using $ sign to work as f-string in python
+    val a = 10
+    val b = 20
+    val result = "The sum of $a and $b is ${a + b}"
+    println(result)
+    
+    //character
+    val letter:Char
+    letter = 'A'
+    println("This is the character, $letter") //this is for adding to string
+    println(letter) //this is just for character
+    print('\n') //prints a new line
+    print('\$') //prints $
+    print('\\') //prints 1 \
+    
+    var n = """
+    Pranjal
+    Pranjal
+    Pranjal
+    Pranjal
+    Pranjal
+    """
+    
+    println(n)
+    
+    var name: String = """
+    Pranjal
+      Pranjal
+        Pranjal
+          Pranjal
+            Pranjal
+    """
+    
+    var name1 = """
+    	  Pranjal
+    Pranjal	Pranjal
+    	  Pranjal
+    """
+    print(name)
+    print("$name1")
+    
+    //arrays, by definition, are the same in this as java
+    
+    val numbers = arrayOf(1,2,3,4,5) //without data type initialization
+    val words: Array<String> = arrayOf("Kotlin", "Java", "Python", "C++", "Ruby") //with data type
+    val squares = Array(5) {i -> i * i} //using lambda function
+    println(squares) //exactly the same as java
+    
+    val sq1 = squares[3]
+    val num1 = numbers[1]
+    val w1 =  words[2]
+    println(sq1)
+    println(num1)
+    println(w1)
+}
