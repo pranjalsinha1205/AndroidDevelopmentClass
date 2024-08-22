@@ -1,0 +1,75 @@
+fun main(args:Array<String>) {
+    //Operators
+    /*
+     * Arithmetic(+,-,*,/,%)
+     * Relational(>,<,>=,<=,==,!=)
+     * Assignment(+=, -=, *=, /=, %=)(just like python)
+     * Unary(+,-,++,--,!)
+     * Logical(&&,||,!)
+     * Bitwise(shl-shift left, shr, ushr- unsigned shr, and, or, xor, inv)
+    */
+    var a = 10
+    var b = 20
+    val isTrue = true
+    val isFalse = false
+    val add = a + b
+    
+    //arithmetic operators
+    println("Arithmetic Operators")
+    println("Addition: $a + $b = $add")
+    println("Subtraction: $a - $b = ${a-b}")
+    println("Multiplication: $a  * $b = ${a*b}")
+    println("Division: $a / $b = ${a/b}")
+    println("Modulo: $a % $b = ${a%b}\n")
+    
+    //relational operator
+    val isEqual = a==b
+    println("Relational Operators")
+    println("$a == $b: $isEqual")
+    println("$a != $b: ${a!=b}")
+    println("$a > $b: ${a>b}")
+    println("$a < $b: ${a<b}")
+    println("$a >= $b: ${a>=b}")
+    println("$a <= $b: ${a<=b}\n")
+    
+    //assignment operators
+    println("Assignment operators")
+    print("$a += $b: ")
+    a += b
+    print("$a\n")
+    print("$a -= $b: ")
+    a -= b
+    print("$a\n")
+    print("$a *= $b: ")
+    a *= b
+    print("$a\n")
+    print("$a /= $b: ")
+    a /= b
+    print("$a\n")
+    print("$a %= $b: ")
+    a %= b
+    print("$a\n\n")
+    
+    //unary operators
+    println("Unary Operators")
+    print("+$a : ")
+    +a
+    print("$a\n")
+    print("-$a : ")
+    -a
+    print("$a\n")
+    print("++$a : ")
+    ++a
+    print("$a\n")
+    print("--$a : ")
+    --a
+    print("$a\n\n")
+    
+    //logical operators
+    println("Logical Operators")
+    var a1 = true;
+    var b1 = false;
+    println("$a1 && $b1: ${a1&&b1}")
+    println("$a1 || $b1: ${a1||b1}")
+    println("!$a1: ${!a1}")
+}
