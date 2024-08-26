@@ -1,0 +1,79 @@
+fun main(args:Array<String>) {
+    //Control flow
+    var temperature = 25
+    if (temperature > 20){
+        println("Warm day")
+    }
+    else{
+        println("Cold day")
+    }
+    
+    var age1 = 18
+    if(age1 >= 18){
+        println("You are an adult")
+    }
+    else{
+        println("You are a minor")
+    }
+    
+    val score = 89
+    if (score >= 90){
+        println("")
+    }
+    
+    //create a calculator with the help of if, else, else if and all arithmetic oprators will be used
+    println("\nCalculator")
+//     val sc = readLine()
+    val a:Int = 20
+    println("Enter the first number: $a")
+    val b:Int = 10
+    println("Enter the second number: $b")
+    val op:String = "*"
+    println("Enter the operator: $op")
+    if(op == "+"){
+        println("$a + $b = ${a+b}")
+    }
+    else if(op == "-"){
+        println("$a - $b = ${a-b}")
+    }
+    else if(op == "*"){
+        println("$a * $b = ${a*b}")
+    }
+    else if(op == "/"){
+        println("$a / $b = ${a/b}")
+    }
+    else if(op == "%"){
+        println("$a % $b = ${a%b}")
+    }
+    
+    //age classification
+    println("\nAge Classification")
+    var age = 15
+    if(age>13){
+        println("You are a child")
+    }
+    else if(age in 13..19){
+        println("You are a teenage")
+    }
+    else if(age in 20..64){
+        println("You are an adult")
+    }
+    else{
+        println("Senior")
+    }
+    
+    //When statement
+    println("\nWhen Statement")
+    val dayOfWeek = 3;
+    val dayName = when(dayOfWeek){
+        1 -> "Monday"
+        2 -> "Tuesday"
+        3 -> "Wednesday"
+        4 -> "Thursday"
+        5 -> "Friday"
+        6 -> "Saturday"
+        7 -> "Sunday"
+        else -> "Invalid day"
+    }
+    println("The day $dayOfWeek of the week is $dayName")
+}
