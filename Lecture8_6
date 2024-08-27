@@ -1,0 +1,104 @@
+import java.util.Scanner;
+
+fun main(args: Array<String>) {
+    var sc = Scanner(System.`in`)
+    // for loop
+    println("For Loop")
+    //first way
+    println("First way")
+    for (i in 1..5){
+        println("Number: $i")
+    }
+    println("----------------------------------------------")
+    //second way
+    println("Second way")
+    for (i in 1 until 5){ //until will print from 1 to 4
+        println("Number: $i")
+    }
+    println("----------------------------------------------")
+    //third way of iterating over a list
+    println("Third way as elements of an array")
+    var a = arrayOf(1,2,3,4,5)
+    for (i in a){
+        println(i)
+    }
+    println("----------------------------------------------")
+    //reverse loop
+    println("Reverse Loop")
+    for (i in 5 downTo 1){
+        println("Number: $i")
+    }
+    println("----------------------------------------------")
+    //reverse with step size
+    println("Reverse with step size")
+    //5..3..1
+    // the same as in python where it was for i in range(1,10,2) or range(5,0(not 1 because it wont print it),-2)
+    for (i in 5 downTo 1 step 2){
+        println("Number: $i")
+    }
+    println("----------------------------------------------")
+    //printing list alongside the index
+    println("List items alongside the indices")
+    val fruits = listOf("Apple", "Banana", "Cherry")
+    for (i in fruits.indices){
+        println("The index of ${fruits[i]} is $i")
+    }
+    println("----------------------------------------------")
+    //while loop
+    println("While loop")
+    var i = 5
+    while (i > 0){
+        println("The number is: $i")
+        i--
+    }
+    println("----------------------------------------------")
+    //do-while loop
+    println("Do while loop")
+    i = 5
+    do{
+        println("Number is: $i")
+        i--
+    }
+    while (i>50)
+    println("----------------------------------------------")
+    i = 5
+    do{
+        println("Number is: $i")
+        i--
+    }
+    while (i>0)
+    println("----------------------------------------------")
+    i = 1
+    do{
+        println("Number is: $i")
+        i++
+    }
+    while (i<=5)
+    println("----------------------------------------------")
+    //functions
+    println("Functions")
+    demo()
+    println("----------------------------------------------")
+    val res = add(2,5)
+    println(res)
+    println("----------------------------------------------")
+    var gr = greet()
+    println(gr)
+    println("----------------------------------------------")
+    move()
+}
+fun demo(){
+    println("Hello, World")
+}
+fun add(a: Int, b: Int): Int{
+    return a + b
+}
+fun greet(): String{
+    var sc = Scanner(System.`in`)
+    print("Enter your name: ")
+    var name = sc.nextLine()
+    return "Hello! $name, Welcome to the jungle!"
+}
+fun move(){
+    println("Kamehameha!")
+}
