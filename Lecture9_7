@@ -100,6 +100,6 @@ fun fib(n:Int):Int{
 
 class Student{
     fun result(){
-        println("Pending")
+        println("You are the topper")
     }
 }
