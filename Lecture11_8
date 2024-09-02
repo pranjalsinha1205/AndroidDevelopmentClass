@@ -25,6 +25,14 @@ fun main(args: Array<String>) {
     var c1 = Person2("Heena") //when we give just one parameter
     c1.intro()
 
+// Inheritance
+// Feature of OOP that allows a new class to inherit properties and methods from an existing class
+// we have to write "open" before a class if we want to inherit it
+// syntax-> class DerivedClassName : BaseClassName()
+    println("\nInheritance")
+    val myRectangle = Rectangle(4.0,5.0)
+    val mySquare = Square(3.0)
+    mySquare.display()
 }
 
 class Person{
@@ -61,5 +69,22 @@ class Person2(var name:String, var age:Int){
     constructor() : this("rahul", 50)
     fun intro(){
         println("My name is $name and age is $age")
+    }
+}
+
+//inheritance
+open class Rectangle(val a:Double, val b: Double){
+    fun area():Double{
+        return a*b
+    }
+    open fun display(){
+        println("The area of rectangle with dimensions $a and $b is ${area()}")
+    }
+}
+
+//inheriting class
+class Square(side:Double):Rectangle(side,side){
+    override fun display() {
+        println("The area of square with side $a is ${area()}")
     }
 }
