@@ -61,12 +61,13 @@ class Person{
 }
 
 //using primary constructor
-class Person2(var name:String, var age:Int){
-    constructor(x:String) : this(){
+class Person2(var name:String, var age:Int){ //here, it seems to me that 
+    // they are both making the class and constructor at the same time
+    constructor(x:String) : this(){//this one is when only one argument is given
         this.name=x
         this.age=0
     }
-    constructor() : this("rahul", 50)
+    constructor() : this("rahul", 50)//this one's like a default constructor
     fun intro(){
         println("My name is $name and age is $age")
     }
