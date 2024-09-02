@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+fun main(args: Array<String>) {
+    //OOPs constructor stuff
+    /*
+    *There are two types of constructor, primary and secondary
+    * Primary constructor is a simple, concise way to initialize a class, it is defined right after the class name
+    * it is used when we want to set up properties as soon as the object is created
+    * secondary constructor is an additional way to create an object.
+    * it is used when we need to set up object with different parameters of extra logic
+    * secondary constructor is used when we need more flexibility in how objects are created
+     */
+    println("Secondary constructor")
+    var a = Person("Riya",22) //when we give both the parameters
+    a.intro()
+    var b = Person() //when we give no parameters
+    b.intro()
+    var c = Person("Heena") //when we give just one parameter
+    c.intro()
+    println("\nPrimary constructor")
+    var a1 = Person2("Riya",22) //when we give both the parameters
+    a1.intro()
+    var b1 = Person2() //when we give no parameters
+    b1.intro()
+    var c1 = Person2("Heena") //when we give just one parameter
+    c1.intro()
+
+}
+
+class Person{
+    var name:String
+    var age:Int
+
+    //    we use constructor keyword to make a constructor
+//    in this keyword we can either give one, two, or no params according to our choice
+    constructor(x:String, y:Int){
+        this.name = x //"this" points out the same class
+        this.age = y
+    }
+
+    constructor(x:String){
+        this.name=x
+        this.age=0
+    }
+    constructor(){
+        this.name="Rahul"
+        this.age=32
+    }
+
+    fun intro(){
+        println("My name is $name and age is $age")
+    }
+}
+
+//using primary constructor
+class Person2(var name:String, var age:Int){
+    constructor(x:String) : this(){
+        this.name=x
+        this.age=0
+    }
+    constructor() : this("rahul", 50)
+    fun intro(){
+        println("My name is $name and age is $age")
+    }
+}
