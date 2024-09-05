@@ -1,0 +1,51 @@
+import java.util.Scanner;
+fun main(args: Array<String>) {
+    //1
+    var sc = Scanner(System.`in`)
+    print("Enter the total: ")
+    var total = sc.nextDouble()
+    println("")
+    print("Do you have a membership? ")
+    var membership = sc.nextBoolean()
+    algo(total, membership)
+
+    //2
+    var balance:Double = 1000.0
+    while (true) {
+        print("Would you like to make a withdrawal? ")
+        var prompt = sc.nextLine()
+        if (prompt == "no") {
+            println("Thanks for banking with us")
+            break
+        } else if (prompt == "yes") {
+            println("")
+            print("Please enter the amount: ")
+            var amount = sc.nextDouble()
+            sc.nextLine()
+            if (amount > balance) {
+                println("Insufficient balance!")
+            } else {
+                balance = balance - amount
+                println("You withdrew Rs$amount, now you have Rs$balance remaining in your account.\nThank you for using our services")
+            }
+        }
+    }
+}
+
+fun algo(total:Double, membership:Boolean){
+    if(total>=1000){
+        if (membership){
+            println("\nYou are given a 20% discount!")
+            var total_new = total*0.8
+            println("Your total amount after discount is: $total_new")
+        }
+        else{
+            println("\nYou are given a 10% discount!")
+            var total_new = total*0.9
+            println("Your total amount after discount is: $total_new")
+        }
+    }
+    else{
+        println("\nSorry but you get no discount\nYour total is $total")
+    }
+}
