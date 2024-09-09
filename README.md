@@ -16,3 +16,23 @@ onStop() -> when activity is no longer visible to the user
 onRestart() -> when the activity either comes back to interact with user or finish running
 
 onDestroy() -> when the activity ends
+
+# Android studio
+
+Gradle is kind of a compiler which builds the android project
+
+To make a project just go to file>new project>(write all the stuff)>finish
+
+***Android Studio Components***
+
+i) AndroidManifest in manifests work as an index
+
+ii) in kotlin + java we have the main file
+
+iii) in res we have many different stuff for frontend
+
+iv) in drawable we have images
+
+v) in layout there are diff layouts like horizontal, vertical, etc.
+
+vi) rest three will be taught in the third unit
