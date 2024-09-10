@@ -21,7 +21,7 @@ onDestroy() -> when the activity ends
 
 Gradle is kind of a compiler which builds the android project
 
-To make a project just go to file>new project>(write all the stuff)>finish
+To make a project just go to file>new project>empty view activity>write all the stuff>finish
 
 ***Android Studio Components***
 
